@@ -1,8 +1,138 @@
-#include<iostream>
-#include<string>
+#include <iostream>
 #include<cmath>
 using namespace std;
+//prob 1 add
+//prob 1 add
+int add(long long num1,long long num2)
+{
+    long long sum=0;
+    sum=num1+num2;
+    return sum;
+}
 int main()
+{
+    long long num1,num2;
+    cin>>num1>>num2;
+    cout<<add(num1,num2);
+
+    return 0;
+}
+//prob 2 print
+void print(int s)
+{
+        for(int i=1;i<=s;i++)
+       {
+
+       cout<<i;
+        if(i!=s) cout<<" ";
+       }
+}
+int main()
+{
+    int s;
+    cin>>s;
+    print(s);
+
+}
+//prob 5 swapping
+void swaping (int a,int b)
+{
+    int temp;
+    temp=a;
+    a=b;
+    b=temp;
+    cout<<a<<" "<<b;
+}
+int main()
+{
+    int a,b;
+    cin>>a>>b;
+    swaping(a,b);
+}
+//prob 4 prime 
+bool prime(long long num)
+{
+    long long mid_num=sqrt(num);
+    int found=0;
+   // if(num<=1) cout<<"NO";
+    for(long long i=2;i<=mid_num;i++){
+        if(num%i==0)
+        {
+            found=1;   //not prime
+            break;
+        }
+    }
+    return found;
+}
+int main()
+{
+    int test_case;cin>>test_case;
+    while(test_case--)
+    {
+
+        long long num;cin>>num;
+        if(num==1)
+        {cout<<"NO"<<endl;
+        continue;}
+        else if(prime(num)==1) cout<<"NO"<<endl;
+        else cout<<"YES"<<endl;
+
+    }
+}
+//prob 7 max and min
+int maximum(int arr[],int length)
+{
+    int maxi;
+    maxi=arr[0];
+    for(int i=1;i<length;i++)
+    {
+        if(arr[i]>maxi)
+           {
+               maxi=arr[i];
+           }
+    }
+    return maxi;
+}
+int minimum(int arr[],int length)
+{
+    int mini;
+    mini=arr[0];
+    for(int i=1;i<length;i++)
+        if(arr[i]<mini)
+    {
+         mini=arr[i];
+    }
+    return mini;
+}
+int main()
+{
+    int n;cin>>n;
+    int arr[n]={};
+    for(int i=0;i<n;i++)
+        cin>>arr[i];
+    cout<<minimum(arr,n)<<" ";
+    cout<<maximum(arr,n);
+}
+//prob 6 equation
+long long equ(int n1,int n2)
+{
+    long long res=0;
+    for(long long i=2;i<=n2;i+=2)
+        res+=pow(n1,i);
+
+    return res;
+}
+int main()
+{
+    long long n1,n2;cin>>n1>>n2;
+    cout<<equ(n1,n2);
+}
+/*#include<iostream>
+#include<string>
+#include<cmath>
+using namespace std;*/
+
+/*nt main()
 {
     int r,c,a[100][100],b[100][100],sum[100][100],i,j;
     cin>>r>>c;
@@ -20,7 +150,7 @@ int main()
 for(i=0;i<r;i++)
     for(j=0;j<c;j++)
     cout<<sum[i][j];
-}
+}*/
 /*int main()
 {
     int n,first,last,a,b,digits,nn;

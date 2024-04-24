@@ -1,0 +1,5 @@
+rrr 5 2 3 1 Total: 11
+yy 6 7 8 6 Total: 27
+uuu 5 7 8 4 Total: 24
+ooo 4 3 2 1 Total: 10
+ppp 6 8 5 3 Total: 22
